@@ -4,8 +4,7 @@
 Vagrant.configure(2) do |config|
   config.vm.provision "shell", path: "setup.sh", privileged: true
 
-#  config.vm.box = "https://cloud-images.ubuntu.com/xenial/current/xenial-server-cloudimg-amd64-vagrant.box"
-  config.vm.box = "ubuntu1604"
+  config.vm.box = "https://cloud-images.ubuntu.com/xenial/current/xenial-server-cloudimg-amd64-vagrant.box"
   config.vm.hostname = "grafana"
   config.vm.network "forwarded_port", guest: 8080, host: 8080
   config.vm.network "forwarded_port", guest: 3000, host: 3000
